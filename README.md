@@ -53,7 +53,8 @@ void regression() {
 
     // Try a linear model y = c0 + c1*x
     constexpr auto A_linear = augc(ones<double,10,1>(), x);
-    constexpr auto c_linear = A_linear % y;
+    constexpr auto c_linear = A_linear % y;  // c = A % y means solve the linear system A*c = y
+                                             // (in the least squares sense if necessary)
     constexpr auto y_linear = A_linear * c_linear;
     
     // Compute the R^2 value
