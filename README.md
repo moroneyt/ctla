@@ -7,7 +7,7 @@ Compile-time linear algebra in C++
 
 •	Intuitive syntax for initialisation, indexing, augmenting
 
-•	Inverses, linear systems and least squares problems supported
+•	Matrix arithmetic including inverses and linear systems supported
 
 •	Block matrices supported
 
