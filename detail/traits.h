@@ -69,8 +69,7 @@ template <typename U> struct traits<matrix<U, 1, 1>> {
 
 // what type to promote to when (e.g.) augmenting differently-typed matrices
 template <typename T, typename S> struct promotion {
-   using type = std::remove_reference_t<decltype(true ? std::declval<T>()
-                                                      : std::declval<S>())>;
+   using type = std::common_type_t<T, S>;
 };
 
 template <typename T, typename S>
